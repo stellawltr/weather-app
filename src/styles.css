@@ -1,0 +1,83 @@
+h1 {
+  color: black;
+  font-weight: 300;
+  padding-left: 0px;
+  padding-right: 15px;
+}
+h2 {
+  font-weight: 100;
+  font-size: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 0.4;
+}
+h3 {
+  font-weight: 100;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 2;
+  font-size: 15px;
+  text-align: center;
+}
+.card-body {
+  background-color: #dcd0c6;
+  margin-top: 30px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+.col {
+  text-align: center;
+  font-weight: 200;
+  background-color: #dcd0c6;
+  font-size: 20px;
+}
+
+.col-3 {
+  color: #2b2129;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 15px;
+  text-align: center;
+}
+.col-3:hover {
+  cursor: pointer;
+  color: #b3a4b1;
+}
+
+.i {
+  font-weight: 100;
+}
+.form-control {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 15px;
+}
+.btn.btn-dark:hover {
+  background: #2b2129;
+}
+.btn.btn-dark {
+  background-color: #b3a4b1;
+  border: none;
+}
+
+.temp {
+  font-size: 50px;
+}
+
+.weather-temperature .units {
+  position: relative;
+  top: 12px;
+}
