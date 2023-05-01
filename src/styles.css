@@ -88,3 +88,6 @@ ul {
   margin: 0 auto;
   margin: 30px auto;
 }
+.weather-forecast-max {
+  font-weight: 300;
+}
