@@ -2,7 +2,7 @@
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
-  let descriptionElement = document.querySelector("#description");
+  let descriptionElement = document.querySelector("#temperature-description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon");
@@ -12,8 +12,8 @@ function showTemperature(response) {
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = response.data.temperature.humidity;
-  windElement.innerHTML = Math.round(response.wind.speed);
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.time * 1000);
   iconElement.setAttribute(
     "src",
     `https://api.shecodes.io/weather/v1/current?query=${response.data.condition.icon_url}`
@@ -37,6 +37,7 @@ search("Zürich");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
 // date and time
 
 function formatDate(timestamp) {
@@ -60,4 +61,5 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
