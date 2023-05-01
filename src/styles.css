@@ -20,7 +20,7 @@ h3 {
   text-align: center;
 }
 .card-body {
-  background-color: #dcd0c6;
+  background-color: #c2b2eef5;
   margin-top: 30px;
 }
 
@@ -41,7 +41,7 @@ ul {
 .col {
   text-align: center;
   font-weight: 200;
-  background-color: #dcd0c6;
+  background-color: #c2b2eef5;
   font-size: 20px;
 }
 
@@ -54,7 +54,7 @@ ul {
 }
 .col-3:hover {
   cursor: pointer;
-  color: #b3a4b1;
+  color: white;
 }
 
 .i {
@@ -80,4 +80,9 @@ ul {
 .weather-temperature .units {
   position: relative;
   top: 12px;
+}
+.vanilla-weather-app {
+  max-width: 600px;
+  margin: 0 auto;
+  margin: 30px auto;
 }
