@@ -1,7 +1,7 @@
 // temperature
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
-  let cityElement = document.querySelector("#city");
+  let cityInputElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
@@ -9,21 +9,21 @@ function showTemperature(response) {
   let dateElement = document.querySelector("#date");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
-  cityElement.innerHTML = response.name;
-  descriptionElement.innerHTML = response.weather[0];
-  humidityElement.innerHTML = response.main.humidity;
+  cityInputElement.innerHTML = response.data.city;
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(response.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
-    `https://api.shecodes.io/weather/v1/current?query=${response.weather[0].icon}`
+    `https://api.shecodes.io/weather/v1/current?query=${response.data.condition.icon_url}`
   );
-  iconElement.setAttribute("alt", response.weather[0].description);
+  iconElement.setAttribute("alt", response.data.condition.description);
 }
 
 function search(city) {
   let apiKey = "843cf8b9d864b4563f40bt2o7a52f5ef";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&unites=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
 
