@@ -59,3 +59,18 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+// forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = `<div class="row">
+                <div class="col">
+                    <div class="weather-forecast-day">Wed</div>
+                    <i class="fa-solid fa-cloud-showers-heavy"></i>
+                    <br>
+                    <div class="weather-forecast-temperatures">
+                        <span class="weather-forecast-max">18º</span>
+                        <span class="weather-forecast-min">10º</span>
+                    </div>
+                </div>`;
+}
