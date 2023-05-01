@@ -44,99 +44,98 @@
                         <div class="input-group mb-3">
                             <input type="search" class="form-control" placeholder="Enter city" aria-label="city"
                                 aria-describedby="basic-addon2" id="city-input">
-                </form>
-                <form id="button-form">
-                    <div class="input-group-append">
-                        <button type="submit" class="btn btn-dark">Search</button>
-                        <button type="submit" class="btn btn-light">Current</button>
+
+                            <form id="button-form">
+                                <div class="input-group-append">
+                                    <button type="submit" value="search" class="btn btn-dark">Search</button>
+                                    <button type="submit" class="btn btn-light">Current</button>
 
 
+                                </div>
+                                <br>
+                            </form>
+
+
+                        </div>
+                        <div class="container">
+                            <h1 id="city">Zürich </h1>
+                            <ul>
+                                <li> Last updated: <span id="date"></span>
+
+                                </li>
+                                <li id="temperature-description">
+                                    Cloudy
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <br>
-                </form>
+                    <div class="row">
+
+                        <div class="col-6">
+                            <span class="d-flex weather-temperature">
+
+                                <img src="" alt="cloudy" id="icon">
+                                <strong class="temp" id="temperature">3</strong>
+                                <span class="units"> ºC | <a href="#"></a>ºF</span>
+                            </span>
+                        </div>
+
+                        <div class="col-6">
+                            <ul>
+                                <li>
+                                    Precipitation: <span id="precipitation"></span> %
+                                </li>
+                                <li>
+                                    Humidity: <span id="humidity"></span> %
+                                </li>
+                                <li>
+                                    Wind: <span id="wind"></span> km/h
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            Wed
+                            <br>
+                            <i class="fa-solid fa-cloud-showers-heavy"></i>
+                            <br>
+                            4º
+                        </div>
+                        <div class="col">
+                            Thu
+                            <br>
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <br>
+                            2º
+                        </div>
+                        <div class="col">
+                            Fri
+                            <br>
+                            <i class="fa-solid fa-cloud-sun-rain"></i>
+                            <br>
+                            5º
+                        </div>
+                        <div class="col">
+                            Sat
+                            <br>
+                            <i class="fa-solid fa-cloud-showers-heavy"></i>
+                            <br>
+                            4º
+                        </div>
+                        <div class="col">
+                            Sun
+                            <br>
+                            <i class="fa-solid fa-sun"></i>
+                            <br>
+                            1º
+                        </div>
+                    </div>
 
 
             </div>
-            <div class="container">
-                <h1 id="city"> Zürich</h1>
-                <ul>
-                    <li> Last updated: <span id="date"></span>
 
-                    </li>
-                    <li id="temperature-description">
-                        Cloudy
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-
-            <div class="col-6">
-                <span class="d-flex weather-temperature">
-
-                    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
-                        alt="cloudy" id="icon">
-                    <strong class="temp" id="temperature">3</strong>
-                    <span class="units"> ºC | <a href="#"></a>ºF</span>
-                </span>
-            </div>
-
-            <div class="col-6">
-                <ul>
-                    <li>
-                        Precipitation: <span id="precipitation"></span> %
-                    </li>
-                    <li>
-                        Humidity: <span id="humidity"></span> %
-                    </li>
-                    <li>
-                        Wind: <span id="wind"></span> km/h
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                Wed
-                <br>
-                <i class="fa-solid fa-cloud-showers-heavy"></i>
-                <br>
-                4º
-            </div>
-            <div class="col">
-                Thu
-                <br>
-                <i class="fa-solid fa-cloud-sun"></i>
-                <br>
-                2º
-            </div>
-            <div class="col">
-                Fri
-                <br>
-                <i class="fa-solid fa-cloud-sun-rain"></i>
-                <br>
-                5º
-            </div>
-            <div class="col">
-                Sat
-                <br>
-                <i class="fa-solid fa-cloud-showers-heavy"></i>
-                <br>
-                4º
-            </div>
-            <div class="col">
-                Sun
-                <br>
-                <i class="fa-solid fa-sun"></i>
-                <br>
-                1º
-            </div>
-        </div>
-
-
-    </div>
-
-    <script src="src/index.js"></script>
+            <script src="src/index.js"></script>
 
 
 </html>

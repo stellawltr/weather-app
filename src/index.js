@@ -19,6 +19,7 @@ function showTemperature(response) {
     `https://api.shecodes.io/weather/v1/current?query=${response.data.condition.icon_url}`
   );
   iconElement.setAttribute("alt", response.data.condition.description);
+  console.log(response.data.condition.icon_url);
 }
 
 function search(city) {
@@ -32,8 +33,6 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
-
-search("Zürich");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
