@@ -34,6 +34,8 @@ search("Zürich");
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
+// click city
+
 // date and time
 
 function formatDate(timestamp) {
@@ -48,13 +50,13 @@ function formatDate(timestamp) {
   }
 
   let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
+    "Sunday, ",
+    "Monday, ",
+    "Tuesday, ",
+    "Wednesday, ",
+    "Thursday, ",
+    "Friday, ",
+    "Saturday, ",
   ];
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
@@ -74,3 +76,4 @@ function displayForecast() {
                     </div>
                 </div>`;
 }
+displayForecast();
