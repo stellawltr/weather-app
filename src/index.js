@@ -88,14 +88,16 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (forecastWeekday) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastWeekday, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
           <div class="col-2">
               <div class="weather-forecast-day"> ${formatDay(
                 forecastWeekday.time
               )} </div>
+              
               <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
                 forecastWeekday.condition.icon
               }.png" 
@@ -114,6 +116,7 @@ function displayForecast(response) {
           </div>
       
       `;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
