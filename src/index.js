@@ -1,3 +1,11 @@
+// weather forecast
+function getForecast(coordinates) {
+  let apiKey = "843cf8b9d864b4563f40bt2o7a52f5ef";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
+
 // temperature
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -16,13 +24,17 @@ function showTemperature(response) {
   dateElement.innerHTML = formatDate(response.data.time * 1000);
   iconElement.setAttribute("src", `${response.data.condition.icon_url}`);
   iconElement.setAttribute("alt", response.data.condition.description);
-}
 
+  getForecast(response.data.coordinates);
+}
+// search City
 function search(city) {
   let apiKey = "843cf8b9d864b4563f40bt2o7a52f5ef";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&unites=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
+
+// handle sumbmit
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -33,8 +45,6 @@ search("Zürich");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-// click city
 
 // date and time
 
@@ -63,7 +73,7 @@ function formatDate(timestamp) {
 }
 // forecast
 
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -89,4 +99,3 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-displayForecast();
