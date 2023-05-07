@@ -65,15 +65,28 @@ function formatDate(timestamp) {
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = `<div class="row">
-                <div class="col">
-                    <div class="weather-forecast-day">Wed</div>
-                    <i class="fa-solid fa-cloud-showers-heavy"></i>
-                    <br>
-                    <div class="weather-forecast-temperatures">
-                        <span class="weather-forecast-max">18º</span>
-                        <span class="weather-forecast-min">10º</span>
-                    </div>
-                </div>`;
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="col-2">
+              <div class="weather-forecast-day"> Fri </div>
+              <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt
+                                    width="42"/>             
+                                    <br>
+                                  
+          <div class="weather-forecast-temperatures">
+            <span class="weather-forecast-max"> 18º </ span>
+            <span class="weather-forecast-min"> 10º </ span>
+          </div>
+          </div>
+      
+      `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 displayForecast();

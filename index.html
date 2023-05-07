@@ -48,7 +48,7 @@
                 </form>
                 <h1 id="city">Zürich</h1>
                 <ul>
-                    <li>Last updated: <span id="date"></span></li>
+                    <li><span id="date"></span></li>
                     <li id="temperature-description">Cloudy</li>
                 </ul>
                 <div class="row">
@@ -70,55 +70,59 @@
                 </div>
                 <div class="weather-forecast" id="forecast">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-2">
                             <div class="weather-forecast-day">Wed</div>
-                            <i class="fa-solid fa-cloud-showers-heavy"></i>
-                            <br />
+                            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt
+                                width="42" />
+
                             <div class="weather-forecast-temperatures">
                                 <span class="weather-forecast-max">18º</span>
                                 <span class="weather-forecast-min">10º</span>
                             </div>
+                        </div>
 
+                        <div class="col-2">
+                            Thu
+                            <br />
+                            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt
+                                width="42" />
 
-                            <div class="col">
-                                Thu
-                                <br />
-                                <i class="fa-solid fa-cloud-sun"></i>
-                                <br />
-                                2º
-                            </div>
-                            <div class="col">
-                                Fri
-                                <br />
-                                <i class="fa-solid fa-cloud-sun-rain"></i>
-                                <br />
-                                5º
-                            </div>
-                            <div class="col">
-                                Sat
-                                <br />
-                                <i class="fa-solid fa-cloud-showers-heavy"></i>
-                                <br />
-                                4º
-                            </div>
-                            <div class="col">
-                                Sun
-                                <br />
-                                <i class="fa-solid fa-sun"></i>
-                                <br />
-                                1º
-                            </div>
+                            <br />
+                            2º
+                        </div>
+                        <div class="col-2">
+                            Fri
+                            <br />
+                            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt
+                                width="42"> <br />
+                            5º
+                        </div>
+                        <div class="col-2">
+                            Sat
+                            <br />
+                            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt
+                                width="42"> <br />
+                            4º
+                        </div>
+                        <div class="col-2">
+                            Sun
+                            <br />
+                            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt
+                                width="42"> <br />
+                            1º
                         </div>
                     </div>
                 </div>
-                <h3>
-                    <a class="link" href="https://github.com/stellawltr/vanilla-weather-app" target="_blank">Open-source
-                        code</a>
-                    by Stella Walter
-                </h3>
             </div>
+
+            <h3>
+                <a class="link" href="https://github.com/stellawltr/vanilla-weather-app" target="_blank">Open-source
+                    code</a>
+                by Stella Walter
+            </h3>
         </div>
-        <script src="src/index.js"></script>
+    </div>
+    <script src="src/index.js"></script>
 </body>
 
 </html>
