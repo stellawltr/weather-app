@@ -1,18 +1,18 @@
 h1 {
-  color: #3a3736;
-  font-weight: 300;
-  padding-left: 0px;
+  color: #565250;
+  padding-left: 15px;
   padding-right: 15px;
+  font-size: 50px;
 }
 h2 {
-  font-weight: 100;
   font-size: 15px;
   padding-left: 15px;
   padding-right: 15px;
   line-height: 0.4;
+  color: #565250;
 }
 h3 {
-  font-weight: 300;
+  font-weight: 200;
   padding-left: 15px;
   padding-right: 15px;
   line-height: 2;
@@ -27,6 +27,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/079/915/original/IMG_5723.JPG?1682969991);
   background-size: cover;
+  opacity: 0.88;
 }
 
 li {
@@ -34,21 +35,26 @@ li {
   margin: 0;
   padding: 0;
 }
-li::first-letter {
+li:first-letter {
   text-transform: capitalize;
 }
 ul {
   margin: 0;
   padding: 0;
-}
-.col-2 {
-  text-align: center;
-  font-weight: 200;
-  background-color: #c2b2eef5;
-  font-size: 10px;
-  margin: 0;
+  padding-left: 15px;
+  color: #565250;
 }
 
+.col-2 {
+  text-align: center;
+  font-size: 15px;
+  margin: 0;
+  color: #565250;
+}
+.temp {
+  font-size: 50px;
+  padding-top: 2px;
+}
 .form-control {
   padding-left: 15px;
   padding-right: 15px;
@@ -58,12 +64,8 @@ ul {
   background: #2b2129;
 }
 .btn.btn-dark {
-  background-color: #b3a4b1;
+  background-color: #9f939e;
   border: none;
-}
-
-.temp {
-  font-size: 50px;
 }
 
 .weather-temperature .units {
@@ -75,16 +77,21 @@ ul {
   margin: 0 auto;
   margin: 30px auto;
 }
-.weather-forecast-max {
-  font-weight: 300;
-}
 
 .link {
-  color: black;
-  font-weight: 420;
+  color: #b3a4b1;
+  font-weight: 200;
 }
 
 .link:hover {
-  font-weight: 400;
-  color: black;
+  font-weight: 250;
+  color: #b3a4b1;
+}
+.col-6 {
+  padding-right: 15px;
+  color: #565250;
+  font-size: 15px;
+}
+.card-body {
+  background-color: #b3a4b1;
 }
