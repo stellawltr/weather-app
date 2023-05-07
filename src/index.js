@@ -67,13 +67,13 @@ function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Sun", "Mon", "Tue"];
-  days.forEach(function (day) {
+  let days = ["Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (weekday) {
     forecastHTML =
       forecastHTML +
       `
           <div class="col-2">
-              <div class="weather-forecast-day"> Fri </div>
+              <div class="weather-forecast-day"> ${weekday} </div>
               <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" alt
                                     width="42"/>             
                                     <br>
