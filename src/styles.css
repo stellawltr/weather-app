@@ -29,6 +29,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/079/915/original/IMG_5723.JPG?1682969991);
   background-size: cover;
+  background-repeat: none;
   opacity: 0.88;
 }
 
@@ -66,7 +67,7 @@ ul {
   background: #2b2129;
 }
 .btn.btn-dark {
-  background-color: #9f939e;
+  background-color: #e0dad2;
   border: none;
 }
 
@@ -95,5 +96,5 @@ ul {
   font-size: 15px;
 }
 .card-body {
-  background-color: #b3a4b1;
+  background-color: #e9e6e0;
 }
