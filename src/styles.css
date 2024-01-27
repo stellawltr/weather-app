@@ -27,9 +27,9 @@ h3 {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/079/915/original/IMG_5723.JPG?1682969991);
+  background-image: url("mountains.png");
   background-size: cover;
-  background-repeat: none;
+  background-repeat: no-repeat;
   opacity: 0.88;
 }
 
@@ -46,6 +46,7 @@ ul {
   padding: 0;
   padding-left: 15px;
   color: #565250;
+
 }
 
 .col-2 {
